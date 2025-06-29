@@ -48,14 +48,13 @@
 <button class="tweet-button">
   Tweet
 </button> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Buttons with Bell Icon</title>
+  <title>Stylish YouTube Buttons</title>
 
-  <!-- Font Awesome CDN for bell icon -->
+  <!-- Font Awesome CDN -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -65,86 +64,135 @@
   />
 
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button, .subscribe-button {
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
     .subscribe-button {
-      background-color: rgb(200, 0, 0);
+      background: linear-gradient(to right, #cc0000, #ff0000);
       color: white;
       border: none;
-      height: 36px;
-      width: 105px;
-      border-radius: 2px;
+      height: 40px;
+      width: 120px;
+      border-radius: 24px;
+      font-weight: bold;
+      font-size: 14px;
       cursor: pointer;
-      margin-right: 8px;
+    }
+
+    .subscribe-button:hover {
+      background: linear-gradient(to right, #ff4444, #ff0000);
+      transform: scale(1.05);
     }
 
     .join-button {
       background-color: white;
-      border-color: rgb(41, 118, 211);
-      border-style: solid;
-      border-width: 1px;
       color: rgb(41, 118, 211);
-      height: 36px;
-      width: 62px;
-      border-radius: 2px;
+      border: 2px solid rgb(41, 118, 211);
+      height: 40px;
+      width: 80px;
+      border-radius: 24px;
+      font-weight: bold;
+      font-size: 14px;
       cursor: pointer;
+    }
+
+    .join-button:hover {
+      background-color: rgb(41, 118, 211);
+      color: white;
+      transform: scale(1.05);
     }
 
     .tweet-button {
-      background-color: rgb(2, 158, 255);
+      background: linear-gradient(to right, #1da1f2, #0d8ddb);
       color: white;
       border: none;
-      height: 36px;
-      width: 74px;
-      border-radius: 18px;
+      height: 40px;
+      width: 90px;
+      border-radius: 24px;
       font-weight: bold;
-      font-size: 15px;
-      cursor: pointer;
-      margin-left: 8px;
-    }
-
-    .bell-container {
-      position: relative;
-      display: inline-block;
-      font-size: 24px;
-      color: #606060;
-      margin-left: 12px;
+      font-size: 14px;
       cursor: pointer;
     }
 
-    .notification-dot {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 8px;
-      height: 8px;
-      background-color: red;
-      border-radius: 50%;
-      border: 2px solid white;
+    .tweet-button:hover {
+      background: linear-gradient(to right, #33b8ff, #1a9be0);
+      transform: scale(1.05);
     }
 
-    .bell-container:hover {
-      color: #ff0000;
+    .like-button,
+    .bell-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0 16px;
+      background-color: #eaeaea;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .like-button:hover,
+    .bell-button:hover {
+      background-color: #dcdcdc;
+      transform: scale(1.05);
+    }
+
+    .like-button i,
+    .bell-button i {
+      margin-right: 6px;
+      font-size: 16px;
+    }
+
+    a {
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <button class="subscribe-button">
-    SUBSCRIBE
-  </button>
+  <!-- Subscribe button -->
+  <a href="https://www.youtube.com/@shikharraiyat3545" target="_blank">
+    <button class="subscribe-button">
+      SUBSCRIBE
+    </button>
+  </a>
 
+  <!-- Join button -->
   <button class="join-button">
     JOIN
   </button>
 
+  <!-- Tweet button -->
   <button class="tweet-button">
     Tweet
   </button>
 
-  <!-- Bell icon with notification dot -->
-  <div class="bell-container" title="Notifications">
-    <i class="fas fa-bell"></i>
-    <span class="notification-dot"></span>
-  </div>
+  <!-- Like button -->
+  <button class="like-button" title="Like">
+    <i class="fas fa-thumbs-up"></i>Like
+  </button>
+
+  <!-- Bell icon button -->
+  <button class="bell-button" title="Notifications">
+    <i class="fas fa-bell"></i>Bell
+  </button>
 
 </body>
 </html>
